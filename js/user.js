@@ -1,11 +1,12 @@
-fetch('https://v1.hitokoto.cn/?c=j&c=d&c=h')
-.then(response => response.json())
-.then(data => {
-  const hitokoto = document.getElementById('hitokoto_text')
-  // hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
-  hitokoto.innerText = data.hitokoto
-})
-.catch(console.error)
+// 一言接口
+// fetch('https://v1.hitokoto.cn/?c=j&c=d&c=h')
+// .then(response => response.json())
+// .then(data => {
+//   const hitokoto = document.getElementById('hitokoto_text')
+//   // hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+//   hitokoto.innerText = data.hitokoto
+// })
+// .catch(console.error)
 
 
 // entersearch = function (){
@@ -19,7 +20,9 @@ fetch('https://v1.hitokoto.cn/?c=j&c=d&c=h')
 
 cg = function (obj) {
   var o = document.getElementById("hitokoto");
-  o.innerHTML = "<input type='text' id = 'search_text' value='" + document.getElementById("hitokoto_text").innerHTML + "' />";
+  var w = $("#hitokoto").innerWidth();
+  o.innerHTML = "<input type='text' id = 'search_text' value='" + document.getElementById("jinrishici-sentence").innerHTML + "' />";
+  $("#hitokoto").css("width",w);
   document.getElementById("search_text").select();
 
   var input = document.getElementById("search_text");

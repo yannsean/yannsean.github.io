@@ -192,7 +192,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.pjax) {
       Action.pjax();
-    }scroolToTop
+    }
     if (CONFIG.lazyload.enable) {
       Action.lazyload();
     }
