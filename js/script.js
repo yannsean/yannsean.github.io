@@ -80,7 +80,10 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       //   }
       // });
       $(".fab-plus").on("click", function () {
-        window.open('http://i.yxml.life:1995')
+        window.open('http://i.yxml.life')
+      });
+      $(".fab-fig").on("click", function () {
+        document.getElementById("background").style.display = 'none';
       });
       $(".fab-menu").on("click", function () {
         if ($(".menu").hasClass("menu-active")) {

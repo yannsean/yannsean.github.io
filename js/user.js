@@ -45,3 +45,42 @@ cg = function (obj) {
 //    }
 //   })
 
+// 主图缓慢出现
+
+addFadeInBackground('https://uploadbeta.com/api/pictures/random', 'background');
+    
+    function addFadeInBackground(url, domId) {
+      var background = new Image();
+      background.src = url;
+      background.onload = function () {
+        console.log('Background load complete!');
+        var loadbackground = document.getElementById(domId);
+        loadbackground.style.backgroundImage = 'url(' + background.src + ')';
+        loadbackground.style.animationName = 'fadein';
+      }
+    }
+
+
+ // 自动隐藏
+var new_scroll_position = 0;
+var last_scroll_position;
+var header = $("#hitokoto");
+var h = document.getElementById("hitokoto");
+
+window.addEventListener('scroll', function(e) {
+    last_scroll_position = window.scrollY;
+
+    // Scrolling down
+    if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
+        // header.removeClass('slideDown').addClass('slideUp');
+        // h.style.opacity = 0;
+        h.style.animationName = 'fadeout';
+
+        // Scrolling up
+    } else if (new_scroll_position > last_scroll_position) {
+        // header.removeClass('slideUp').addClass('slideDown');
+        h.style.animationName = 'fadein';
+    }
+
+    new_scroll_position = last_scroll_position;
+});
