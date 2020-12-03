@@ -35,6 +35,15 @@
 	animation-timing-function: linear;
 }
 
+@media (max-width: 576px){
+	#hitokoto{
+		font-size: 1em;
+		max-width: 90%;
+		padding: 8px 10px;
+	}
+}
+
+
 #search_text{
 	display: inline-block;
 	font-size: 1em;
@@ -123,20 +132,20 @@ div.fab.fab-fig{
 
 @media (max-width: 576px){
 	div.fab.fab-menu{
-		right: 10%;
+		right: 5%;
 	}
 
 	div.fab.fab-plus{
 		top: 40px;
-		right: -webkit-calc(10% + 60px); 
-		right: -moz-calc(10% + 60px);
-		right: calc(10% + 60px); 
+		right: -webkit-calc(5% + 60px); 
+		right: -moz-calc(5% + 60px);
+		right: calc(5% + 60px); 
 	}
 	div.fab.fab-fig{
 		top: 40px;
-		right: -webkit-calc(10% + 120px); 
-		right: -moz-calc(10% + 120px);
-		right: calc(10% + 120px); 
+		right: -webkit-calc(5% + 120px); 
+		right: -moz-calc(5% + 120px);
+		right: calc(5% + 120px); 
 	}
 }
 
@@ -203,7 +212,6 @@ div.fab.fab-up{
 	    max-width: 1000px;
 	}
 }
-
 
 
 

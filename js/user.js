@@ -46,19 +46,21 @@ cg = function (obj) {
 //   })
 
 // 主图缓慢出现
+var bg = document.getElementById('background');
+if (bg){
+	addFadeInBackground('https://uploadbeta.com/api/pictures/random', bg);
+}
 
-addFadeInBackground('https://uploadbeta.com/api/pictures/random', 'background');
     
-    function addFadeInBackground(url, domId) {
-      var background = new Image();
-      background.src = url;
-      background.onload = function () {
-        console.log('Background load complete!');
-        var loadbackground = document.getElementById(domId);
-        loadbackground.style.backgroundImage = 'url(' + background.src + ')';
-        loadbackground.style.animationName = 'fadein';
-      }
-    }
+function addFadeInBackground(url, b) {
+  var background = new Image();
+  background.src = url;
+  background.onload = function () {
+    console.log('Background load complete!');
+    b.style.backgroundImage = 'url(' + background.src + ')';
+    b.style.animationName = 'fadein';
+  }
+}
 
 
  // 自动隐藏
@@ -66,6 +68,10 @@ var new_scroll_position = 0;
 var last_scroll_position;
 var header = $("#hitokoto");
 var h = document.getElementById("hitokoto");
+var menu = document.getElementById("fab-menu");
+var plus = document.getElementById("fab-plus");
+var fig = document.getElementById("fab-fig");
+
 
 window.addEventListener('scroll', function(e) {
     last_scroll_position = window.scrollY;
@@ -74,12 +80,30 @@ window.addEventListener('scroll', function(e) {
     if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
         // header.removeClass('slideDown').addClass('slideUp');
         // h.style.opacity = 0;
-        h.style.animationName = 'fadeout';
+        if(h){
+        	h.style.animationName = 'fadeout';
+        }        
+        menu.style.opacity = 0;
+        menu.style.visibility = 'hidden';
+        plus.style.opacity = 0;
+        plus.style.visibility = 'hidden';
+        fig.style.opacity = 0;
+        fig.style.visibility = 'hidden';
+
 
         // Scrolling up
     } else if (new_scroll_position > last_scroll_position) {
         // header.removeClass('slideUp').addClass('slideDown');
-        h.style.animationName = 'fadein';
+        if (h) {
+        	h.style.animationName = 'fadein';
+        }
+        
+        menu.style.opacity = 1;
+        menu.style.visibility = 'visible';
+        plus.style.opacity = 1;
+        plus.style.visibility = 'visible';
+        fig.style.opacity = 1;
+        fig.style.visibility = 'visible';
     }
 
     new_scroll_position = last_scroll_position;
