@@ -95,9 +95,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           }
         }
       });
-      // $(".fab-menu, .fab-up").on("click", function () {
-      //   Func.freezeFab();
-      // });
+      $(".fab-menu, .fab-up").on("click", function () {
+        Func.freezeFab();
+      });
       if (CONFIG.fab.alwaysShow === true) {
         Func.showFab();
       } else {

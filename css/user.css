@@ -112,7 +112,7 @@ div.fab.fab-menu{
 	visibility: visible;
 	position: fixed;
 	top: 40px;
-	right: 40px;
+	left: 40px;
 }
 
 div.fab.fab-plus{

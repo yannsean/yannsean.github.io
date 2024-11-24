@@ -570,14 +570,14 @@ body p {
   }
 }
 .lazyload {
-  background: url("/images/theme/loading.gif") no-repeat center;
+  background: url("../images/theme/loading.gif") no-repeat center;
 }
 .loading {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
-  background: url("/images/theme/loading.gif") no-repeat center;
+  background: url("../images/theme/loading.gif") no-repeat center;
   background-color: #fff;
   z-index: 2019;
   overflow: hidden;
@@ -586,7 +586,7 @@ body p {
   z-index: 40;
   height: 90vh;
   width: 100%;
-  background-image: url("/images/theme/loading.jpg");
+  background-image: url("../images/theme/loading.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -697,7 +697,7 @@ body p {
   font-size: 1.5em;
 }
 .fab:hover {
-  background-color: #ffbdbd;
+  background-color: #ffe4e4;
   color: #33333d;
   cursor: pointer;
 }
